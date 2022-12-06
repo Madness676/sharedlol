@@ -41,7 +41,7 @@ for i=1, #str do
     local c = str:sub(i,i)
     
     if c == "[" then
-        rem = true
+        rem = false
         continue
     elseif c == "]" then
         rem = true
