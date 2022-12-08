@@ -33,7 +33,7 @@ local function endshift()
 end
 
 local queue = ""
-local rem = false
+local rem = true
 
 for i=1, #str do
     if shared.stop == true then return end
@@ -41,7 +41,7 @@ for i=1, #str do
     local c = str:sub(i,i)
     
     if c == "[" then
-        rem = true
+        rem = false
         Delay = '0'
     elseif c == "]" then
         rem = true
