@@ -42,7 +42,7 @@ for i=1, #str do
     
     if c == "[" then
         rem = false
-        Delay = '0'
+        continue
     elseif c == "]" then
         rem = true
         if string.find(queue," ") then
