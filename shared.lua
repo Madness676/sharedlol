@@ -87,9 +87,12 @@ for i=1, #str do
         if shared.nospacedelay then continue end
         wait(delay)
         continue
+    elseif c == "" then
+    continue
     elseif c == "|" or c == "-" then
         wait(delay*2)
         continue
+
     end
     
     if not rem then
