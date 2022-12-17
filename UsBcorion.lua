@@ -479,8 +479,8 @@ function OrionLib:MakeWindow(WindowConfig)
 	WindowConfig.IntroText = WindowConfig.IntroText or "Private Hub"
 	WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
 	WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
-	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://11811664765"
-	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://11811664765"
+	WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://11838307800"
+	WindowConfig.IntroIcon = WindowConfig.IntroIcon or "rbxassetid://11838307800"
 	OrionLib.Folder = WindowConfig.ConfigFolder
 	OrionLib.SaveCfg = WindowConfig.SaveConfig
 
