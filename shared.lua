@@ -85,14 +85,11 @@ for i=1, #str do
         continue
     elseif c == " " or string.byte(c) == 10 then
         if shared.nospacedelay then continue end
-        wait(delay)
+        wait(delay*2)
         continue
-    elseif c == "" then
-    continue
     elseif c == "|" or c == "-" then
         wait(delay*2)
         continue
-
     end
     
     if not rem then
