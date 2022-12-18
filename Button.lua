@@ -10,7 +10,7 @@ ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
-Frame.BackgroundTransparency = 0.10
+Frame.BackgroundTransparency = 100
 Frame.Position = UDim2.new(0.858712733, 0, 0.0237762257, 0)
 Frame.Size = UDim2.new(0.075, 0.15, 0.075, 0.075)
 
@@ -23,10 +23,11 @@ TextButton.Text = "Open/Close"
 TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 TextButton.TextScaled = true
 TextButton.TextSize = 50.000
+TextButton.Draggable = true
 TextButton.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 TextButton.TextStrokeTransparency = 0.000
 TextButton.TextWrapped = true
-TextButton.MouseButton1Down:Connect(function()
+TextButton.MouseButton1Click:Connect(function()
     game:GetService("VirtualInputManager"):SendKeyEvent(true, "LeftAlt" , false , game)
     end)
 
