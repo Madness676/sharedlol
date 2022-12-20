@@ -92,12 +92,12 @@ for i=1, #str do
     elseif c == "|" or c == "-" then
         wait(delay*2)
         continue
-    elseif c == "" then
-        continue
     elseif Notes == '{' then
-         Delay = Delay/2
+        Delay = Delay/2
+        continue
     elseif Notes == '}' then
          Delay = DefaultDelay
+        continue
 
     end
     
