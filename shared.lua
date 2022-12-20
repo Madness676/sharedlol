@@ -94,10 +94,8 @@ for i=1, #str do
         continue
     elseif Notes == '{' then
         Delay = Delay/2
-        continue
     elseif Notes == '}' then
-         Delay = DefaultDelay
-        continue
+        Delay = DefaultDelay
 
     end
     
